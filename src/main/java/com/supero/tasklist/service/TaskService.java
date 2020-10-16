@@ -33,7 +33,7 @@ public class TaskService {
 		try {
 			task = repository.findById(idTask);
 			
-			if(task.isEmpty()) throw new EmptyResultDataAccessException(0);
+			if(!task.isPresent()) throw new EmptyResultDataAccessException(0);
 			
 		}catch (EmptyResultDataAccessException e) {
 			throw new TaskNotExist(String.format("Tarefa com id %d não existe!", idTask));
