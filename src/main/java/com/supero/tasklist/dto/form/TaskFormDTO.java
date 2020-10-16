@@ -1,4 +1,4 @@
-package com.supero.tasklist.dto.Form;
+package com.supero.tasklist.dto.form;
 
 import com.supero.tasklist.domain.Task;
 

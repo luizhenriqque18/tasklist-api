@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 
 import com.supero.tasklist.domain.Task;
-import com.supero.tasklist.dto.Form.TaskFormDTO;
+import com.supero.tasklist.dto.form.TaskFormDTO;
 import com.supero.tasklist.service.TaskService;
 
 @RestController

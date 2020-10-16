@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.supero.tasklist.domain.Task;
@@ -23,7 +24,7 @@ public class TaskService {
 
 
 	public Iterable<Task> findAll() {
-		return this.repository.findAll();
+		return this.repository.findAll(Sort.by(Sort.Direction.DESC, "id"));
 	}
 
 
