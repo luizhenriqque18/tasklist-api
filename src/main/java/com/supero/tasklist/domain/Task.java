@@ -17,8 +17,24 @@ public class Task {
 	private String title;
 	
 	@Column
+	private String description;
+	
+	@Column()
 	private boolean status;
 	
+	public Task() {}
+	
+	public Task(String title, String description) {
+		this.title = title;
+		this.description = description;
+		this.status = false;
+	}
+	public Task(Task t, String title, String description) {
+		this.id = t.getId();
+		this.title = title;
+		this.description = description;
+		this.status = t.isStatus();
+	}
 	public Long getId() {
 		return id;
 	}
@@ -30,6 +46,12 @@ public class Task {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public boolean isStatus() {
 		return status;
