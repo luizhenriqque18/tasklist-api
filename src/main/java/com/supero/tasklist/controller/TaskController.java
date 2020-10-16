@@ -20,7 +20,7 @@ import com.supero.tasklist.service.TaskService;
 
 @RestController
 @RequestMapping("/task")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://tasklist-20.herokuapp.com/")
 public class TaskController {
 	
 	@Autowired
